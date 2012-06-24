@@ -1,0 +1,26 @@
+Buccaneer plugin for Stash
+--------------------------------
+
+To install:
+
+  1. Check that you have exuberant-ctags installed and in your path.
+  2. Download Buccaneer from the Universal Plugin Manager
+  3. Enjoy!
+
+Description
+--------------------------------
+
+This plugin let you navigate in the source code on Stash like a Buccaneer would navigate the High Seas.
+
+Main Features & Benefits
+ * Quick navigation right from the browser
+
+
+Documentation
+--------------------------------
+
+For information about installing, configuring and using the plugin, please go to:
+
+      https://github.com/madgnome/buccaneer
+
+This file was modified by IntelliJ IDEA 11.1.2 for binding GitHub repository
