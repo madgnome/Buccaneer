@@ -1,0 +1,27 @@
+{namespace raid.widget}
+
+/**
+ * @param tags
+ */
+{template .tagList}
+  <div class="tag-list">
+    <ul>
+      {foreach $tag in $tags}
+        <li class="tag"
+            data-path="{$tag.path}" data-line="{$tag.line}"
+            title="Click to view file {$tag.path}">
+          <header>
+            <h5>{$tag.shortPath}</h5>
+            <span class="line">Line {$tag.line}</span>
+          </header>
+          <div class="tag-excerpt">{$tag.excerpt}</div>
+        </li>
+      {/foreach}
+    </ul>
+
+//    {foreach $tag in $tags}
+//      <div><a href="/stash/projects/PROJECT_1/repos/rep_1/browse/{$tag.path}#{$tag.line}">{$tag.path}</a></div>
+//      <div>{$tag.line}</div>
+//    {/foreach}
+  </div>
+{/template}

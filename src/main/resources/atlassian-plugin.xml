@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+  <plugin-info>
+    <description>${project.description}</description>
+    <version>${project.version}</version>
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+  </plugin-info>
+
+  <resource type="i18n" name="i18n" location="com.madgnome.stash.plugins.buccaneer"/>
+
+  <component-import key="eventPublisher" interface="com.atlassian.event.api.EventPublisher"/>
+  <component-import key="securityService" interface="com.atlassian.stash.user.SecurityService"/>
+  <component-import key="historyService" interface="com.atlassian.stash.history.HistoryService"/>
+  <component-import key="gitScmConfig" interface="com.atlassian.stash.scm.git.GitScmConfig"/>
+  <component-import key="scmClientProvider" interface="com.atlassian.stash.scm.ScmClientProvider"/>
+  <component-import key="contentService" interface="com.atlassian.stash.content.ContentService"/>
+  <component-import key="applicationPropertiesService" interface="com.atlassian.stash.server.ApplicationPropertiesService"/>
+  <component-import key="i18nService" interface="com.atlassian.stash.i18n.I18nService"/>
+  <component-import key="repositoryService" interface="com.atlassian.stash.repository.RepositoryService"/>
+
+  <component key="repositoryListener" class="com.madgnome.stash.plugins.buccaneer.events.RepositoryListener"/>
+  <component key="pluginListener" class="com.madgnome.stash.plugins.buccaneer.events.PluginListener"/>
+  <component key="tagsRepository" class="com.madgnome.stash.plugins.buccaneer.model.TagsRepository"/>
+
+  <web-resource name="InjectorResource" i18n-name-key="injector-resource.name" key="injector-resource">
+    <description key="injector-resource.description">The InjectorResource Plugin</description>
+    <resource name="injector.js" type="download" location="includes/js/injector.js"/>
+    <context>atl.general</context>
+    <dependency>com.atlassian.stash.stash-web-plugin:global</dependency>
+  </web-resource>
+
+  <web-resource name="BaseWebResource" key="baseweb-resource">
+    <resource name="buccaneer.js" type="download" location="includes/js/buccaneer.js"/>
+    <resource name="tag-list.js" type="download" location="includes/js/tag-list.js"/>
+    <context>atl.general</context>
+    <dependency>com.atlassian.stash.stash-web-plugin:global</dependency>
+  </web-resource>
+
+  <web-resource name="SoyResource" key="soy-resource">
+    <transformation extension="soy">
+      <transformer key="soyTransformer"/>
+    </transformation>
+
+    <resource type="download" name="tag-list.soy.js" location="includes/js/tag-list.soy"/>
+    <context>atl.general</context>
+  </web-resource>
+
+  <web-resource name="LessResource" key="less-resource">
+    <transformation extension="less">
+      <transformer key="less-transformer"/>
+    </transformation>
+
+    <resource type="download" name="buccaneer.css" location="includes/js/buccaneer.less"/>
+    <resource type="download" name="tag-list.css" location="includes/js/tag-list.less"/>
+    <context>atl.general</context>
+  </web-resource>
+
+  <rest key="rest-resource" path="/buccaneer" version="1.0">
+    <description>Provides the REST resources for Buccaneer plugin.</description>
+  </rest>
+
+</atlassian-plugin>

@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+$	.\test\resources\js\test\test.js	/^var $ = require('jquery');$/;"	variable	line:10
+ArrayProto	.\test\resources\lib\underscore.js	/^  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;$/;"	variable	line:24
+CTAGS_FILTER_TERMINATOR	.\main\java\com\madgnome\stash\plugins\buccaneer\analysis\Ctags.java	/^  private static final String CTAGS_FILTER_TERMINATOR = "__ctags_done_with_file__";$/;"	field	line:17	class:Ctags
+Ctags	.\main\java\com\madgnome\stash\plugins\buccaneer\analysis\Ctags.java	/^public class Ctags$/;"	class	line:13
+DefinitionResource	.\main\java\com\madgnome\stash\plugins\buccaneer\rest\DefinitionResource.java	/^public class DefinitionResource$/;"	class	line:16
+Definitions	.\main\java\com\madgnome\stash\plugins\buccaneer\analysis\Definitions.java	/^public class Definitions$/;"	class	line:3
+ExampleServlet	.\main\java\com\madgnome\stash\plugins\buccaneer\ExampleServlet.java	/^public class ExampleServlet extends HttpServlet$/;"	class	line:11	inherits:HttpServlet
+FileDefinitionResource	.\main\java\com\madgnome\stash\plugins\buccaneer\rest\FileDefinitionResource.java	/^public class FileDefinitionResource$/;"	class	line:14
+FileDefinitionResource	.\test\java\com\madgnome\stash\plugins\rest\FileDefinitionResourceTest.java	/^public class FileDefinitionResource {$/;"	class	line:12
+FileDefinitionResourceModel	.\main\java\com\madgnome\stash\plugins\buccaneer\rest\data\FileDefinitionResourceModel.java	/^    public FileDefinitionResourceModel() {$/;"	method	line:11	class:FileDefinitionResourceModel	signature:()
+FileDefinitionResourceModel	.\main\java\com\madgnome\stash\plugins\buccaneer\rest\data\FileDefinitionResourceModel.java	/^    public FileDefinitionResourceModel(String message) {$/;"	method	line:14	class:FileDefinitionResourceModel	signature:(String message)
+FileDefinitionResourceModel	.\main\java\com\madgnome\stash\plugins\buccaneer\rest\data\FileDefinitionResourceModel.java	/^public class FileDefinitionResourceModel {$/;"	class	line:6
+FileDefinitionResourceTest	.\test\java\it\com\madgnome\stash\plugins\rest\FileDefinitionResourceTest.java	/^public class FileDefinitionResourceTest$/;"	class	line:12

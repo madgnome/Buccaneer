@@ -1,0 +1,112 @@
+//@import "/static/global.less";
+//@import "/static/global-colours.less";
+
+@primaryLinkColor: #3D77B4;
+
+.tag-list {
+  background: #FFF;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 350px;
+}
+
+.tag-list header {
+  position: relative;
+}
+
+
+.stash-theme .tag-list h5 {
+  font-weight: normal;
+  display: inline-block;
+  margin-top: 0;
+  font-size: 13px;
+  max-width: 300px;
+  vertical-align: top;
+/* truncate text */
+  line-height: 1.307;
+  height: 1.307em; /* 1x line-height */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tag-list ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+.tag-list li {
+  list-style-type: none;
+  position: relative;
+  border-bottom: 1px solid #DDD;
+  padding: 8px;
+}
+
+.tag-list li span.line {
+  float: right;
+  margin-left: 8px;
+  margin-top: 1px; /* Required due to smaller font size */
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.tag-list .lozenge {
+  float: right;
+}
+
+.tag-list .tag-excerpt {
+  height: 1.307em; /* 1x line-height */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tag-list .spinner {
+  height: 8px;
+  padding-top: 16px;
+}
+
+/* Hover Styles */
+
+.tag-list li:hover {
+  background-color: #C9E1EE;
+  cursor: pointer;
+}
+
+.tag-list li:hover,
+.tag-list li:hover h5 {
+  color: #3C77B4;
+}
+
+.tag-list li:hover .lozenge {
+  color: #FFFFFF;
+  background-color: #3C77B4;
+}
+
+.tag-list li:hover time {
+  color: #666666;
+}
+
+.tag-list li.active {
+  background-color: @primaryLinkColor;
+}
+
+.tag-list li.active,
+.tag-list li.active:hover time,
+.stash-theme .tag-list li.active h5 {
+  color: #FFF;
+}
+
+.tag-list li.active .lozenge {
+  background-color: #FFF;
+  color: #666;
+}
+
+.tag-list li.no-more-results {
+  background-color: transparent;
+  color: #AAA;
+  cursor: default;
+}
